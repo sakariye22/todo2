@@ -3,6 +3,9 @@ import * as React from 'react'
 
 // Import interfaces
 import { TodoItemInterface } from './../interfaces'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 
 // TodoItem component
 const TodoItem = (props: TodoItemInterface) => {
@@ -17,15 +20,17 @@ const TodoItem = (props: TodoItemInterface) => {
       </div>
       
       <div className="todo-item-input-wrapper">
-        <input
-          value={props.todo.text}
+        <ul><li> {props.todo.text}</li></ul>
+         <input
+         
           onBlur={props.handleTodoBlur}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => props.handleTodoUpdate(event, props.todo.id)}
         />
       </div>
       
       <div className="item-remove" onClick={() => props.handleTodoRemove(props.todo.id)}>
-        ⨯
+      <FontAwesomeIcon icon={faTrash} />
+
       </div>
     </div>
   )
