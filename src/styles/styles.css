@@ -100,12 +100,20 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 120px;
+    height: 45px;
     border-radius: 50%;
     border: 1px solid #ececec;
     transition: .25s all ease-in-out;
-  }
+  } .todo-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #ececec;
+    transition: .25s all ease-in-out;}
   
   .todo-item-unchecked:hover {
     background: hsla(168, 76%, 42%, .25);
@@ -113,9 +121,11 @@ html {
   }
   
   .todo-item-checked {
-    color: #fff;
-    background: #1abc9c;
+    /*color: #fff;
+    background: #1abc9c;*/
     border: 1px solid #1abc9c;
+    text-decoration-line: line-through;
+    
   }
   
   .item-remove {

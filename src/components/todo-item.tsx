@@ -13,16 +13,22 @@ const TodoItem = (props: TodoItemInterface) => {
     <div className='todo-item'>
       <div onClick={() => props.handleTodoComplete(props.todo.id)}>
         {props.todo.isCompleted ? (
-          <span className="todo-item-checked">✔</span>
+          <ul><li className= "todo-item-checked"style ={{backgroundColor : ''}}>  
+          <span className="todo-item-checked">  {props.todo.text}</span>  </li>
+          </ul>
         ) : (
-          <span className="todo-item-unchecked" />
+          <ul><li className= "todo-item-unchecked"style ={{backgroundColor : ''}}>  
+          <span className="todo-item-unchecked">  {props.todo.text} </span>
+          </li> </ul>
+         
+            
+           
         )}
       </div>
       
       <div className="todo-item-input-wrapper">
-        <ul><li> {props.todo.text}</li></ul>
-         <input
-         
+       
+         <input 
           onBlur={props.handleTodoBlur}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => props.handleTodoUpdate(event, props.todo.id)}
         />
