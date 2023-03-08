@@ -27,11 +27,11 @@ const TodoItem = (props: TodoItemInterface) => {
       </div>
       
       <div className="todo-item-input-wrapper">
-       
+       {/*
          <input 
           onBlur={props.handleTodoBlur}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => props.handleTodoUpdate(event, props.todo.id)}
-        />
+        />*/}
       </div>
       
       <div className="item-remove" onClick={() => props.handleTodoRemove(props.todo.id)}>
