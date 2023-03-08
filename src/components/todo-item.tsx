@@ -14,11 +14,11 @@ const TodoItem = (props: TodoItemInterface) => {
       <div onClick={() => props.handleTodoComplete(props.todo.id)}>
         {props.todo.isCompleted ? (
           <ul><li className= "todo-item-checked"style ={{backgroundColor : ''}}>  
-          <span className="todo-item-checked">  {props.todo.text}</span>  </li>
+         {props.todo.text} </li>
           </ul>
         ) : (
           <ul><li className= "todo-item-unchecked"style ={{backgroundColor : ''}}>  
-          <span className="todo-item-unchecked">  {props.todo.text} </span>
+           {props.todo.text}
           </li> </ul>
          
             
